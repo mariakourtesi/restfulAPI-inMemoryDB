@@ -42,6 +42,18 @@ describe('user create', () => {
             .toThrow();
     });
 
+     /**
+     * user should exist after being created.
+     */
+      it('exists after being created', async () => {
+        await userService.create(userComplete);
+
+        const createduser = await userModel.findOne();
+
+        expect(createduser.name)
+            .toBe(userComplete.name);
+    });
+
     /**
      * Tests that a user can be created without a description.
      */
@@ -51,18 +63,6 @@ describe('user create', () => {
         })
             .not
             .toThrow();
-    });
-
-    /**
-     * user should exist after being created.
-     */
-    it('exists after being created', async () => {
-        await userService.create(userComplete);
-
-        const createduser = await userModel.findOne();
-
-        expect(createduser.name)
-            .toBe(userComplete.name);
     });
 
     /**
