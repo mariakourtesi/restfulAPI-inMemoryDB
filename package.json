@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --coverage --runInBand ./test",
     "lint": "./node_modules/.bin/eslint ./",
-    "lint-fix": "./node_modules/.bin/eslint ./ --fix"
+    "lint-fix": "./node_modules/.bin/eslint ./ --fix",
+    "start": " nodemon app.js"
   },
   "author": "Maria Kourtesi",
   "license": "ISC",
