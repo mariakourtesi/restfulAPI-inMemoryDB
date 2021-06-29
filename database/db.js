@@ -18,6 +18,7 @@ module.exports.connect = async () => {
     };
 
     await mongoose.connect(uri, mongooseOpts);
+    console.log("In memory database connected")
 };
 
 /**

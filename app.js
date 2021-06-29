@@ -17,7 +17,7 @@ data.connect();
  
 // define a simple route
 app.get('/', (req, res) => {
- res.json({"message": "Welcome to ExpressMongoApp application."});
+ res.json({"message": "Welcome to ExpressInMemoryDB application."});
 });
  
 require('./routes/user.routes')(app);
