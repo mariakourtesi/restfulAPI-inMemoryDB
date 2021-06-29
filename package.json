@@ -1,0 +1,21 @@
+{
+  "name": "restfulapi-inmemorydb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maria Kourtesi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "j": "^1.0.0",
+    "mongoose": "^5.13.0",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "mongodb-memory-server": "^6.9.6"
+  }
+}
