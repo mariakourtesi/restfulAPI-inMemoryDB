@@ -33,7 +33,7 @@ description: Just add a description
 
 ### Get all Users
 
-`GET /thing/`
+`GET /users/`
 
     http://localhost:3000/users/
 
