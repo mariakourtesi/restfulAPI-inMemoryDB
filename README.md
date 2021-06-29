@@ -22,15 +22,19 @@ It has been Dockerized and CircleCI has also been added.
 Open postman  and use the url bellow
 
 `POST /users/`
+
     http://localhost:3000/users/
 
 name: Name
+
 email: name@test.com
+
 description: Just add a description
 
 ### Get all Users
 
 `GET /thing/`
+
     http://localhost:3000/users/
 
 ## Get a specific User
