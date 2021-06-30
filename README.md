@@ -59,10 +59,10 @@ description: Just add a description
 
 `GET /users/id`
 
-## Change a Users's name or email
+## Change a User's name or email
 ### Request
 
-`PUT /users/:id/`
+`PUT /users/id/`
 
 ## Delete a User
 
