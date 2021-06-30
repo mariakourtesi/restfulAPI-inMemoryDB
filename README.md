@@ -1,4 +1,7 @@
-# restfulAPI-inMemoryDB app
+
+# Hello, folks! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
+
+# RestfulAPI inMemoryDB with Express :rocket:
 
 This is a simple Restful API that uses express and in-memory server.
 
