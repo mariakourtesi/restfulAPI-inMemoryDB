@@ -1,6 +1,14 @@
 
 # Hello, folks! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
+My name is Maria and I am a Web Developer. 
+
+Feel free to clone this app and try it locally. 
+
+Clone the repo
+
+  git clone https://github.com/mariakourtesi/restfulAPI-inMemoryDB.git
+
 # RestfulAPI app with in MemoryDB and Express :rocket:
 
 This is a simple Restful API that uses express and in-memory server.
@@ -22,11 +30,14 @@ It has been Dockerized and CircleCI has also been added.
 # REST API
 
 ## Add a user
-Open postman  and use the url bellow
+Open postman and add the url bellow
 
 `POST /users/`
 
     http://localhost:3000/users/
+
+Schema: 
+(note: name and email are required fields)
 
 name: Name
 
