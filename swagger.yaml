@@ -1,0 +1,138 @@
+openapi: 3.0.0
+info:
+  title: Restful API documentation
+  description: A Restful API documentation for a adding, getting, updating and deleting users.
+  version: "1.0"
+servers:
+  - url: 'http://localhost:3000/users'
+components:
+  schemas:
+    Task:
+      type: object
+      properties:
+        name:
+          type: string
+          example: 'maria'
+          description: 'The name field is required'
+        email:
+          type: string
+          example: 'maria@test.com'
+          description: 'The email field is required'
+        description:
+          type: string
+          example: 'A law student'
+          description: 'A short description of the user'
+
+  responses:
+    error:
+      description: ERROR
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                description: Describes the error in a human-readable format.
+                type: string
+                example: Permission denied.
+
+  parameters:
+    task:
+      name: name
+      in: query
+      required: true
+      description: The name of the user.
+      schema:
+        type: string
+paths:
+  /users:
+    get:
+      summary: Get users
+      description: Get a list of users
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Task'
+  /:
+    post:
+      summary: Create a User
+      description: Creates a new user
+      parameters:
+        - name: name
+          in: query
+          required: true
+          description: Add a new name.
+          schema:
+            type: string
+            example: Maria
+        - name: email
+          in: query
+          required: true
+          description: Add a new email.
+          schema:
+            type: string
+            example: 'maria@test.com'
+        - name: description
+          in: query
+          description: Add a description, it is not a required field.
+          schema:
+            type: string
+            example: A law student
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    description: Returns the id of the new user.
+                    type: integer
+                    example: 23
+        '500':
+          $ref: '#/components/responses/error'         
+    put:
+      summary: Update a user
+      description: Modify the user's name, email or its description.
+      parameters:
+        - $ref: '#/components/parameters/task'
+        - name: email
+          in: query
+          required: true
+          description: The new email address of the user. Leave out if you don't want to change it.
+          schema:
+            type: string
+            example: mkourt@test.com
+        - name: description
+          in: query
+          description: The description of the user. Leave out if you don't want to change it.
+          schema:
+            type: string
+            example: A arts and design student
+      responses:
+        '200':
+          description: OK
+        '500':
+          $ref: '#/components/responses/error'         
+    delete:
+      summary: Delete a user
+      description: Removes a user completely.
+      parameters:
+        - name: id
+          in: query
+          required: true
+          description: Add the id of the user.
+          schema:
+            type: string
+            example: 60db263620ade125beb8a28b
+      responses:
+        '200':
+          description: OK
+        '500':
+          $ref: '#/components/responses/error'      
