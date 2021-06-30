@@ -17,7 +17,7 @@ This is a simple Restful API that uses express and in-memory server.
 
 It has been Dockerized and CircleCI has also been added.
 
-     [![mariakourtesi](https://circleci.com/gh/mariakourtesi/restfulAPI-inMemoryDB.svg?style=svg)](https://github.com/mariakourtesi/restfulAPI-inMemoryDB/edit/main/README.md)
+ [![mariakourtesi](https://circleci.com/gh/mariakourtesi/restfulAPI-inMemoryDB.svg?style=svg)](https://github.com/mariakourtesi/restfulAPI-inMemoryDB/edit/main/README.md)
 
 
 ## Install
