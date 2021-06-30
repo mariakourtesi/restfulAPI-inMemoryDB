@@ -7,7 +7,9 @@ Feel free to clone this app and try it locally.
 
 Clone the repo
 
-  git clone https://github.com/mariakourtesi/restfulAPI-inMemoryDB.git
+  
+    git clone https://github.com/mariakourtesi/restfulAPI-inMemoryDB.git
+
 
 # RestfulAPI app with in MemoryDB and Express :rocket:
 
