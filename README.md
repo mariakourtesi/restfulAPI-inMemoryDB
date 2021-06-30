@@ -16,7 +16,7 @@ Clone the repo
 
 # RestfulAPI app with in MemoryDB and Express :rocket:
 
-This is a simple Restful API that uses express and in-memory server.
+This is a simple Restful API that uses express server and in-memory database.
 
 It has been Dockerized and CircleCI has also been added.
 
